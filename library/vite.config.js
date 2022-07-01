@@ -1,21 +1,16 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import federation from '@originjs/vite-plugin-federation'
+import federation from '@padcom/vite-plugin-federation'
 
 export default defineConfig({
+  resolve: {
+    preserveSymlinks: true,
+  },
   build: {
-    target: 'esnext'
+    target: 'esnext',
   },
   plugins: [
     vue(),
-    federation({
-      name: 'my_library',
-      exposes: {
-        './remote-simple-button': './src/MyButton.vue',
-      },
-      shared: [
-        'vue'
-      ]
-    })
+    federation()
   ]
 })

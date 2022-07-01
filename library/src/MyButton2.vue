@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="button1" v-bind="$attrs">
+    <button class="button2" v-bind="$attrs">
       <slot />
     </button>
   </div>
@@ -15,8 +15,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.button1 {
-  color: darkviolet;
+.button2 {
+  color: darkblue;
   font-weight: bold;
   border-radius: 5px;
   padding: 5px 25px;
