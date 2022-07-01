@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import federation from '@originjs/vite-plugin-federation'
-
-import { dependencies } from './package.json'
+import federation from '@padcom/vite-plugin-federation'
 
 export default defineConfig({
   build: {
@@ -10,11 +8,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    federation({
-      remotes: {
-        library: 'http://localhost:5001/assets/remoteEntry.js',
-      },
-      shared: dependencies,
-    }),
+    federation(),
   ],
 })

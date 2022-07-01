@@ -13,7 +13,7 @@
   "author": "Matthias Hryniszak <padcom@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@padcom/vite-plugin-federation": "^0.0.1",
+    "@padcom/vite-plugin-federation": "^0.0.3",
     "@vitejs/plugin-vue": "^2.3.3",
     "concurrently": "^7.2.2",
     "vite": "^2.9.13"

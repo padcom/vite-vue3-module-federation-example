@@ -25,8 +25,8 @@ function defineFederatedComponent(importer, component, options = {}) {
 
 export default defineComponent({
   components: {
-    MyButton: defineFederatedComponent(() => import('library/components'), 'MyButton'),
-    MyButton2: defineFederatedComponent(() => import('library/components'), 'MyButton2'),
+    MyButton: defineFederatedComponent(() => import('library/root'), 'MyButton'),
+    MyButton2: defineFederatedComponent(() => import('library/root'), 'MyButton2'),
   },
   data() {
     return {
