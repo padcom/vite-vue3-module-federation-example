@@ -1,8 +1,11 @@
 <template>
   <h1>{{ counter }}</h1>
-  <ul>
-    <li><input type="checkbox" v-model="show" />Show ui</li>
-  </ul>
+  <label>
+    Show UI
+    <input type="checkbox" v-model="show" />
+  </label>
+  <br />
+  <br />
   <MyButton v-if="show" @click="counter++">Inc</MyButton>
   <MyButton2 v-if="show" @click="counter--">Dec</MyButton2>
 </template>
