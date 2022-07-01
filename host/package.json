@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "vite --port 5000 --strictPort",
+    "serve": "concurrently 'npm run build:watch -- --mode=none' 'npm run preview'",
     "build": "vite build",
     "build:watch": "npm run build -- -w",
     "preview": "vite preview --port 5000 --strictPort"
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@padcom/vite-plugin-federation": "^0.0.8",
     "@vitejs/plugin-vue": "^2.3.3",
+    "concurrently": "^7.2.2",
     "vite": "^2.9.13"
   },
   "dependencies": {
