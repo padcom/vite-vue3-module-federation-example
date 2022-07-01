@@ -8,6 +8,6 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    federation(),
+    federation({ debug: true }),
   ],
 })
