@@ -13,6 +13,13 @@ import { defineComponent, defineAsyncComponent } from 'vue'
 import Loading from './Loading.vue'
 import Error from './Error.vue'
 
+/**
+ * Defines an async component that has its implementation in a federated library
+ *
+ * @param {import('vue').AsyncComponentLoader} importer library to import (see `defineAsyncComponent()`)
+ * @param {String} component name of the component to import
+ * @param {import('vue').AsyncComponentOptions} options additional options (see `defineAsyncComponent()`)
+ */
 function defineFederatedComponent(importer, component, options = {}) {
   return defineAsyncComponent({
     loader: async () => (await importer()).default[component],

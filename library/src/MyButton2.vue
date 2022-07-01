@@ -11,6 +11,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   inheritAttrs: false,
+  mounted() {
+    console.log('MyButton2.mounted()')
+  },
+  beforeUnmount() {
+    console.log('MyButton2.beforeUnmount()')
+  },
 })
 </script>
 
