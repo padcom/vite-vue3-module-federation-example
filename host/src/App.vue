@@ -34,10 +34,5 @@ export default defineComponent({
       show: false,
     }
   },
-  methods: {
-    testme() {
-      console.log('Hello!')
-    }
-  }
 })
 </script>
